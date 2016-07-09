@@ -22,5 +22,13 @@ module SaveStarTrekFanFilms
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.generators do |g|
+      g.template_engine   :haml
+      g.test_framework    :rspec, fixture: false
+      g.stylesheets       false
+      g.javascripts       false
+      g.helpers           false
+    end
   end
 end
