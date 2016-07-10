@@ -21,6 +21,7 @@ class LettersController < ApplicationController
   def edit
   end
 
+  # We should write an API that uses the path /api/v1/letters but this works for now
   # POST /letters
   # POST /letters.json
   def create
@@ -69,6 +70,6 @@ class LettersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:email, :name, :return_address, :body, :salutation)
+      params.require(:letter).permit(:email, :name, :return_address, :body, :closing)
     end
 end
