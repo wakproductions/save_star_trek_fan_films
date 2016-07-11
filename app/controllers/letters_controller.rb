@@ -29,10 +29,10 @@ class LettersController < ApplicationController
 
     respond_to do |format|
       if @letter.save
-        format.html { redirect_to @letter, notice: 'Letter was successfully created.' }
-        format.json { render :show, status: :created, location: @letter }
+        format.html { render status: :ok, nothing: true }  # Only AJAX/JSON API calls supported right now
+        format.json { render :show }
       else
-        format.html { render :new }
+        format.html { render status: :bad_request, nothing: true } # Only AJAX/JSON API calls supported right now
         format.json { render json: @letter.errors, status: :unprocessable_entity }
       end
     end

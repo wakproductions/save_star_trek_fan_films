@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    actionizer (0.8.0)
     actionmailer (4.2.1)
       actionpack (= 4.2.1)
       actionview (= 4.2.1)
@@ -128,6 +129,8 @@ GEM
     pry-byebug (3.4.0)
       byebug (~> 9.0)
       pry (~> 0.10)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -235,6 +238,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionizer (~> 0.8)
   byebug (~> 9.0)
   coffee-rails (~> 4.1.0)
   devise (~> 4.2)
@@ -244,6 +248,7 @@ DEPENDENCIES
   jquery-rails (~> 4.1.1)
   pg (~> 0.18)
   pry-byebug (~> 3.4)
+  pry-rails (~> 0.3)
   rails (= 4.2.1)
   react-rails (~> 1.8)
   rspec (~> 3.5)

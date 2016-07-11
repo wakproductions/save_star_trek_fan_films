@@ -11,7 +11,6 @@ var WriteLetterForm = React.createClass({
 
   _handleSubmit: function(event) {
     event.preventDefault();
-    debugger;
     let email          = this.refs.email.value;
     let return_address = this.refs.return_address.value;
     let body           = this.refs.body.value;
@@ -27,7 +26,15 @@ var WriteLetterForm = React.createClass({
       }
     };
 
-    $.post(this._create_letter_path, letter);
+    $.post(
+      this._create_letter_path,
+      letter,
+      (data) => {
+        alert('response received: ' + data);
+      }
+    ).fail((data) => {
+        alert('fail response:' + data.friendly_errors);
+    });
   },
 
   render: function() {
