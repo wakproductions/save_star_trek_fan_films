@@ -1,3 +1,5 @@
+require 'utilities'
+
 class LettersController < ApplicationController
   before_action :set_letter, only: [:show, :edit, :update, :destroy]
 
@@ -32,8 +34,8 @@ class LettersController < ApplicationController
         format.html { render status: :ok, nothing: true }  # Only AJAX/JSON API calls supported right now
         format.json { render :show }
       else
-        format.html { render status: :bad_request, nothing: true } # Only AJAX/JSON API calls supported right now
-        format.json { render json: @letter.errors, status: :unprocessable_entity }
+        format.html { render status: :unprocessable_entity, nothing: true } # Only AJAX/JSON API calls supported right now
+        format.json { render json: { errors: @letter.errors.full_messages }, status: :unprocessable_entity }
       end
     end
   end

@@ -36,7 +36,7 @@ RSpec.describe LettersController, type: :controller do
     context "with invalid params" do
       context 'missing email' do
         let(:errors) do
-          { email: ["can't be blank"] }
+          { errors: ["Email can't be blank"] }
         end
 
         it "responds with an error message" do

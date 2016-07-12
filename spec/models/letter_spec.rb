@@ -2,6 +2,13 @@ require 'spec_helper'
 require 'shoulda/matchers'
 
 RSpec.describe Letter do
+  describe 'defaults' do
+    describe '#written_date' do
+      subject { described_class.new.written_date }
+      it { is_expected.to eql(Date.current) }
+    end
+  end
+
   describe 'validations' do
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_presence_of(:name) }
@@ -13,5 +20,6 @@ RSpec.describe Letter do
       is_expected.to validate_presence_of(:body)
         .with_message('should contain your message to CBS/Paramount')
     }
+
   end
 end
