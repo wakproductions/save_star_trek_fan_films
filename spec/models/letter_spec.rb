@@ -10,8 +10,12 @@ RSpec.describe Letter do
   end
 
   describe 'validations' do
-    it { is_expected.to validate_presence_of(:email) }
-    it { is_expected.to validate_presence_of(:name) }
+    it { is_expected.to validate_presence_of(:email)
+      .with_message('- please enter an email address address so we can keep you updated!')
+    }
+    it { is_expected.to validate_presence_of(:name)
+      .with_message('- please enter your name, which will appear on the letter')
+    }
     it {
       is_expected.to validate_presence_of(:return_address)
         .with_message('should at the very least, please include a city and state')

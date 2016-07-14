@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'home#index'
+
   namespace :admin do
     resources :users
     resources :letters, only: [:index, :show]

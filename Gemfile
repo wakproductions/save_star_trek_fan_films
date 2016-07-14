@@ -14,6 +14,8 @@ gem 'turbolinks',   '~> 5.0'
 gem 'jbuilder',     '~> 2.0'
 gem 'sdoc',         '~> 0.4.0', group: :doc
 gem 'haml',         '~> 4.0'
+gem 'kramdown',     '~> 1.11'
+gem 'haml-kramdown','~> 0.1'
 
 gem 'devise',       '~> 4.2'
 gem 'actionizer',   '~> 0.8'  # An interactor-pattern system by Mike Nichols
