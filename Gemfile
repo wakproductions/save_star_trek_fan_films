@@ -1,24 +1,28 @@
+ruby '2.3.1'
 source 'https://rubygems.org'
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 gem 'pg',           '~> 0.18'
-gem 'sass-rails',   '~> 5.0'
-gem 'uglifier',     '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
 
+# Rails plugins
+gem 'coffee-rails', '~> 4.1.0'
+gem 'haml',         '~> 4.0'
+gem 'haml-kramdown','~> 0.1'
+gem 'jbuilder',     '~> 2.0'
+gem 'kramdown',     '~> 1.11'
+gem 'sass-rails',   '~> 5.0'
+gem 'sdoc',         '~> 0.4.0', group: :doc
+gem 'turbolinks',   '~> 5.0'
+gem 'uglifier',     '>= 1.3.0'
+
+# Frameworks
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails', '~> 4.1.1'
 gem 'react-rails',  '~> 1.8'
-gem 'turbolinks',   '~> 5.0'
-gem 'jbuilder',     '~> 2.0'
-gem 'sdoc',         '~> 0.4.0', group: :doc
-gem 'haml',         '~> 4.0'
-gem 'kramdown',     '~> 1.11'
-gem 'haml-kramdown','~> 0.1'
 
-gem 'devise',       '~> 4.2'
+# Third party design-pattern systems
 gem 'actionizer',   '~> 0.8'  # An interactor-pattern system by Mike Nichols
+gem 'devise',       '~> 4.2'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views

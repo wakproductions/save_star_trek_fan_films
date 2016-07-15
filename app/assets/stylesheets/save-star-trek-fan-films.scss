@@ -1,0 +1,53 @@
+h1.title {
+  margin-top: 40px;
+  text-align: center;
+}
+
+h2, h3, h4 {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+@mixin page-section {
+  a:link, a:visited {
+    color: blue;
+  }
+  a:hover {
+    background-color: #ffa500;
+    text-decoration: none;
+  }
+  p {
+    font-family: "Source Sans Pro";
+    font-size: 14pt;
+    line-height: 1.3;
+  }
+  padding: 35px;
+}
+
+.section-base {
+  @include page-section;
+}
+
+.section-gold {
+  @include page-section;
+  color: #000000;
+  background-color: #F0F055;
+}
+
+.section-footer {
+  @include page-section;
+  color: #ffffff;
+  background-color: #919191;
+}
+
+ul.mailing-address {
+  list-style-type: none;
+}
+
+p.home-write-letter-button {
+  text-align: center;
+
+  a.btn-write-letter {
+    color: #ffffff;
+  }
+}
