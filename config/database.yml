@@ -1,20 +1,22 @@
-development:
+default: &default
   adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
   host: localhost
   username: postgres
   password: postgres
   database: save_star_trek_fan_films
-  pool: 5
-  timeout: 5000
 
 test:
-  adapter: postgresql
+  <<: *default
   host: localhost
   username: postgres
   password: postgres
   database: save_star_trek_fan_films_test
-  pool: 5
-  timeout: 5000
 
 production:
   # To be populated by Heroku
