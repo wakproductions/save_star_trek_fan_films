@@ -8,6 +8,10 @@ h2, h3, h4 {
   text-align: center;
 }
 
+p.center {
+  text-align: center;
+}
+
 @mixin page-section {
   a:link, a:visited {
     color: blue;
@@ -32,6 +36,18 @@ h2, h3, h4 {
   @include page-section;
   color: #000000;
   background-color: #F0F055;
+}
+
+.section-blue {
+  @include page-section;
+  color: #000000;
+  background-color: #4fb4f0;
+}
+
+.section-red {
+  @include page-section;
+  color: #000000;
+  background-color: #f05d59;
 }
 
 .section-footer {
